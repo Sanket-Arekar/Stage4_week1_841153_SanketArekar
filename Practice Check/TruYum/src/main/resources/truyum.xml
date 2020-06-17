@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="item1" class="com.cognizant.truyum.model.MenuItem" scope="prototype"><property name="id" value="1" /><property name="name" value="Sushi" /><property name="price" value="150.0" /><property name="active" value="true" /><property name="dateOfLaunch" value="12/03/2020" /><property name="category" value="Starter" /><property name="freeDelivery" value="false" /></bean>
+    <bean id="item2" class="com.cognizant.truyum.model.MenuItem" scope="prototype"><property name="id" value="2" /><property name="name" value="Kimchi" /><property name="price" value="240.0" /><property name="active" value="true" /><property name="dateOfLaunch" value="10/06/2020" /><property name="category" value="Main Course" /><property name="freeDelivery" value="true" /></bean>
+    <bean id="item3" class="com.cognizant.truyum.model.MenuItem" scope="prototype"><property name="id" value="3" /><property name="name" value="Rameyeon" /><property name="price" value="280.8" /><property name="active" value="true" /><property name="dateOfLaunch" value="14/02/2020" /><property name="category" value="Main Course" /><property name="freeDelivery" value="true" /></bean>
+    <bean id="item4" class="com.cognizant.truyum.model.MenuItem" scope="prototype"><property name="id" value="4" /><property name="name" value="Samosa" /><property name="price" value="120.0" /><property name="active" value="true" /><property name="dateOfLaunch" value="02/03/2020" /><property name="category" value="Dessert" /><property name="freeDelivery" value="false" /></bean>
+    
+    <bean id="menuList" class="java.util.ArrayList">
+    <constructor-arg>
+    <list>
+    <ref bean="item1"></ref>
+    <ref bean="item2"></ref>
+    <ref bean="item3"></ref>
+    <ref bean="item4"></ref>
+    </list>
+    </constructor-arg>
+    </bean>
+</beans>

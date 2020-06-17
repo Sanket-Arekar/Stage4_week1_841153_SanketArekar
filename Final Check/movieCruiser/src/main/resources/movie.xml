@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    
+    <bean id="m1" class="com.cognizant.moviecruiser.model.Movie"><property name="id" value="1" /><property name="title" value="Healer" /><property name="boxOffice" value="10cr"/><property name="active" value="true"/><property name="dateOfLaunch" value="22/12/2014"/><property name="genre" value="Action" /><property name="hasTeaser" value="true"/></bean>
+    <bean id="m2" class="com.cognizant.moviecruiser.model.Movie"><property name="id" value="2" /><property name="title" value="Eternal Monarch" /><property name="boxOffice" value="100cr"/><property name="active" value="true"/><property name="dateOfLaunch" value="12/22/2018"/><property name="genre" value="Action" /><property name="hasTeaser" value="true"/></bean>
+    <bean id="m3" class="com.cognizant.moviecruiser.model.Movie"><property name="id" value="3" /><property name="title" value="Reply 1997" /><property name="boxOffice" value="1000cr"/><property name="active" value="true"/><property name="dateOfLaunch" value="27/08/2019"/><property name="genre" value="Action" /><property name="hasTeaser" value="true"/></bean>
+    <bean id="movieList" class="java.util.ArrayList">
+    <constructor-arg>
+    <list>
+    <ref bean="m1"></ref>
+    <ref bean="m2"></ref>
+    <ref bean="m3"></ref>
+    </list>
+    </constructor-arg>
+    </bean>
+    
+   
+</beans>
