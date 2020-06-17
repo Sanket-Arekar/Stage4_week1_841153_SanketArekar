@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="emp1" class="com.cognizant.employee.Employee" ><property name="firstName" value="Nutan" /><property name="lastName" value="Kadhane" /><property name="department" value="planning" /></bean>
+        <bean id="emp2" class="com.cognizant.employee.Employee"><property name="firstName" value="Anuja" /><property name="lastName" value="Maske" /><property name="department" value="management" /></bean>
+        <bean id="emp3" class="com.cognizant.employee.Employee" ><property name="firstName" value="Kajal" /><property name="lastName" value="Koli" /><property name="departmente" value="planning" /></bean>
+        <bean id="emp4" class="com.cognizant.employee.Employee"><property name="firstName" value="Sayali" /><property name="lastName" value="Dhole" /><property name="department" value="management" /></bean>
+    <bean id="employeeList" class="java.util.ArrayList"><constructor-arg><list><ref bean="emp1"></ref><ref bean="emp2"></ref><ref bean="emp3"></ref><ref bean="emp4"></ref></list></constructor-arg></bean>
+
+</beans>
